@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabzi Mandi Fresh - Online Grocery Store Pakistan</title>
+  <meta name="description" content="Premium online grocery store in Pakistan. Fresh fruits, vegetables, rice, spices and daily essentials delivered to your doorstep." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="ph ph-plant"></i></span>
+        <div class="logo-text">
+          <span class="logo-main">Sabzi Mandi</span>
+          <span class="logo-sub">Fresh Grocery</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-bar" id="searchBar">
+        <i class="ph ph-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search for rice, oil, milk..." autocomplete="off" />
+        <button class="search-btn" id="searchBtn">Search</button>
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+          <i class="ph ph-shopping-cart-simple"></i>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a href="#contact" class="nav-cta">Order Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#hero" class="mobile-link">Home</a></li>
+        <li><a href="#categories" class="mobile-link">Categories</a></li>
+        <li><a href="#featured" class="mobile-link">Products</a></li>
+        <li><a href="#offers" class="mobile-link">Offers</a></li>
+        <li><a href="#delivery" class="mobile-link">Delivery</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Nav Links -->
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#featured">Products</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#delivery">Delivery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===================== CART SIDEBAR ===================== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="closeCart"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <i class="ph ph-shopping-cart-simple"></i>
+        <p>Your cart is empty</p>
+        <span>Add items to get started</span>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">PKR 0</span>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-pattern"></div>
+      <div class="hero-container">
+
+        <div class="hero-content reveal">
+          <span class="hero-badge">Fresh Delivery in 2 Hours</span>
+          <h1 class="hero-title">Pakistan's Freshest<br /><em>Grocery Store</em></h1>
+          <p class="hero-desc">From farm-fresh vegetables and premium Basmati rice to everyday essentials — delivered right to your doorstep across Lahore, Karachi, and Islamabad.</p>
+          <div class="hero-actions">
+            <a href="#featured" class="btn-primary">Shop Now</a>
+            <a href="#categories" class="btn-outline">Explore Categories</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>10,000+</strong><span>Happy Customers</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><strong>500+</strong><span>Products</span></div>
+            <div class="stat-divider"></div>
+            <div class="stat"><strong>2 Hrs</strong><span>Delivery</span></div>
+          </div>
+        </div>
+
+        <div class="hero-image reveal reveal-right">
+          <div class="hero-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=700&q=80" alt="Fresh grocery basket with vegetables and fruits" />
+            <div class="hero-badge-float badge-1">
+              <i class="ph ph-seal-check"></i>
+              <span>100% Fresh</span>
+            </div>
+            <div class="hero-badge-float badge-2">
+              <i class="ph ph-truck"></i>
+              <span>Free Delivery<br/>above PKR 1500</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#categories" class="scroll-indicator">
+        <i class="ph ph-arrow-down"></i>
+      </a>
+    </section>
+
+    <!-- ===================== ANNOUNCEMENT STRIP ===================== -->
+    <div class="announce-strip">
+      <div class="announce-track">
+        <span><i class="ph ph-truck"></i> Free delivery on orders above PKR 1,500</span>
+        <span><i class="ph ph-tag"></i> Use code FRESH10 for 10% off your first order</span>
+        <span><i class="ph ph-clock"></i> Same-day delivery available in Lahore, Karachi &amp; Islamabad</span>
+        <span><i class="ph ph-phone"></i> Call us: 0311-1234567</span>
+        <span><i class="ph ph-truck"></i> Free delivery on orders above PKR 1,500</span>
+        <span><i class="ph ph-tag"></i> Use code FRESH10 for 10% off your first order</span>
+        <span><i class="ph ph-clock"></i> Same-day delivery available in Lahore, Karachi &amp; Islamabad</span>
+        <span><i class="ph ph-phone"></i> Call us: 0311-1234567</span>
+      </div>
+    </div>
+
+    <!-- ===================== CATEGORIES ===================== -->
+    <section class="categories-section section" id="categories">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Browse By</span>
+          <h2 class="section-title">Shop by Category</h2>
+          <p class="section-desc">Explore our wide range of fresh and packaged grocery categories</p>
+        </div>
+
+        <div class="categories-grid reveal">
+          <a href="#featured" class="category-card" data-filter="grains" onclick="filterProducts('grains')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300&q=80" alt="Grains and Rice" />
+            </div>
+            <span>Grains &amp; Rice</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="dairy" onclick="filterProducts('dairy')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300&q=80" alt="Dairy" />
+            </div>
+            <span>Dairy &amp; Eggs</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="vegetables" onclick="filterProducts('vegetables')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=300&q=80" alt="Vegetables" />
+            </div>
+            <span>Vegetables</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="fruits" onclick="filterProducts('fruits')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=300&q=80" alt="Fruits" />
+            </div>
+            <span>Fresh Fruits</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="oil" onclick="filterProducts('oil')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300&q=80" alt="Cooking Oil" />
+            </div>
+            <span>Cooking Oil</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="beverages" onclick="filterProducts('beverages')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&q=80" alt="Beverages" />
+            </div>
+            <span>Beverages</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="snacks" onclick="filterProducts('snacks')">
+            <div class="cat-img-wrap">
+              <img src="https://images.unsplash.com/photo-1620374645498-af6bd681a0bd?w=300&q=80" alt="Snacks" />
+            </div>
+            <span>Snacks</span>
+          </a>
+          <a href="#featured" class="category-card" data-filter="all" onclick="filterProducts('all')">
+            <div class="cat-img-wrap cat-all">
+              <i class="ph ph-grid-four"></i>
+            </div>
+            <span>View All</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PRODUCTS ===================== -->
+    <section class="products-section section" id="featured">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Our Selection</span>
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-desc">Handpicked fresh groceries at the best prices in Pakistan</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs reveal" id="filterTabs">
+          <button class="filter-tab active" data-filter="all" onclick="filterProducts('all')">All Products</button>
+          <button class="filter-tab" data-filter="grains" onclick="filterProducts('grains')">Grains</button>
+          <button class="filter-tab" data-filter="dairy" onclick="filterProducts('dairy')">Dairy</button>
+          <button class="filter-tab" data-filter="vegetables" onclick="filterProducts('vegetables')">Vegetables</button>
+          <button class="filter-tab" data-filter="fruits" onclick="filterProducts('fruits')">Fruits</button>
+          <button class="filter-tab" data-filter="oil" onclick="filterProducts('oil')">Oils</button>
+          <button class="filter-tab" data-filter="beverages" onclick="filterProducts('beverages')">Beverages</button>
+          <button class="filter-tab" data-filter="snacks" onclick="filterProducts('snacks')">Snacks</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid reveal" id="productsGrid">
+          <!-- Products injected by JS -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display:none;">
+          <i class="ph ph-magnifying-glass"></i>
+          <p>No products found. Try a different search.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OFFERS BANNER ===================== -->
+    <section class="offers-section section" id="offers">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Limited Time</span>
+          <h2 class="section-title">Hot Deals &amp; Offers</h2>
+        </div>
+        <div class="offers-grid reveal">
+
+          <div class="offer-card offer-green">
+            <div class="offer-content">
+              <span class="offer-badge">Save 20%</span>
+              <h3>Basmati Rice<br/>Bundle Pack</h3>
+              <p>Buy 5 kg, get 1 kg free on all premium Basmati varieties</p>
+              <div class="offer-price">
+                <span class="old-price">PKR 1,400</span>
+                <span class="new-price">PKR 1,120</span>
+              </div>
+              <a href="#featured" class="offer-btn">Grab Deal</a>
+            </div>
+            <div class="offer-img">
+              <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=280&q=80" alt="Basmati Rice" />
+            </div>
+          </div>
+
+          <div class="offer-card offer-orange">
+            <div class="offer-content">
+              <span class="offer-badge">Save 15%</span>
+              <h3>Fresh Vegetable<br/>Mega Box</h3>
+              <p>Seasonal mixed vegetables sourced from local farms, packed daily</p>
+              <div class="offer-price">
+                <span class="old-price">PKR 850</span>
+                <span class="new-price">PKR 720</span>
+              </div>
+              <a href="#featured" class="offer-btn">Grab Deal</a>
+            </div>
+            <div class="offer-img">
+              <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=280&q=80" alt="Vegetables" />
+            </div>
+          </div>
+
+          <div class="offer-card offer-amber">
+            <div class="offer-content">
+              <span class="offer-badge">Save 25%</span>
+              <h3>Cooking Oil<br/>Family Pack</h3>
+              <p>Premium sunflower &amp; canola cooking oil — 5 litre packs at unbeatable price</p>
+              <div class="offer-price">
+                <span class="old-price">PKR 2,200</span>
+                <span class="new-price">PKR 1,650</span>
+              </div>
+              <a href="#featured" class="offer-btn">Grab Deal</a>
+            </div>
+            <div class="offer-img">
+              <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=280&q=80" alt="Cooking Oil" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEST SELLERS ===================== -->
+    <section class="bestsellers-section section" id="bestsellers">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Most Popular</span>
+          <h2 class="section-title">Best-Selling Products</h2>
+          <p class="section-desc">What our customers buy most — trusted by thousands of Pakistani families</p>
+        </div>
+        <div class="bestsellers-grid reveal" id="bestsellersGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DELIVERY INFO ===================== -->
+    <section class="delivery-section section" id="delivery">
+      <div class="delivery-bg"></div>
+      <div class="container">
+        <div class="delivery-grid">
+          <div class="delivery-content reveal">
+            <span class="section-label light">Fast &amp; Reliable</span>
+            <h2 class="section-title light">Delivery You Can Count On</h2>
+            <p>We deliver fresh groceries straight from wholesale markets and partner farms to your home. No middlemen, no delays.</p>
+            <ul class="delivery-list">
+              <li><i class="ph ph-clock"></i><div><strong>Same-Day Delivery</strong><span>Order before 2 PM for delivery by 7 PM</span></div></li>
+              <li><i class="ph ph-map-pin"></i><div><strong>Covering Major Cities</strong><span>Lahore, Karachi, Islamabad, Rawalpindi, Faisalabad</span></div></li>
+              <li><i class="ph ph-currency-circle-dollar"></i><div><strong>Free Delivery</strong><span>On all orders above PKR 1,500</span></div></li>
+              <li><i class="ph ph-shield-check"></i><div><strong>Freshness Guarantee</strong><span>100% refund if not satisfied with quality</span></div></li>
+            </ul>
+          </div>
+          <div class="delivery-image reveal reveal-right">
+            <img src="https://images.unsplash.com/photo-1616349287408-c2699e6a0f72?w=600&q=80" alt="Grocery delivery on motorcycle in Pakistan" />
+            <div class="delivery-badge">
+              <strong>2 Hours</strong>
+              <span>Average Delivery Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="reviews-section section" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-label">Customer Love</span>
+          <h2 class="section-title">What Our Customers Say</h2>
+        </div>
+        <div class="reviews-grid reveal" id="reviewsGrid">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Contact &amp; Order</h2>
+            <p>Have questions about an order, want to bulk buy, or need help? Our team is available 7 days a week.</p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="ph ph-phone-call"></i>
+                <div><strong>Phone / WhatsApp</strong><span>0311-1234567</span></div>
+              </div>
+              <div class="contact-item">
+                <i class="ph ph-envelope-simple"></i>
+                <div><strong>Email</strong><span>orders@sabzimandi.pk</span></div>
+              </div>
+              <div class="contact-item">
+                <i class="ph ph-map-pin-line"></i>
+                <div><strong>Head Office</strong><span>14-B Main Market, Gulberg III, Lahore</span></div>
+              </div>
+              <div class="contact-item">
+                <i class="ph ph-clock"></i>
+                <div><strong>Working Hours</strong><span>Mon - Sun: 8:00 AM - 10:00 PM</span></div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" placeholder="Ahmed Ali" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <select id="city" required>
+                <option value="">Select your city</option>
+                <option>Lahore</option>
+                <option>Karachi</option>
+                <option>Islamabad</option>
+                <option>Rawalpindi</option>
+                <option>Faisalabad</option>
+                <option>Multan</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group form-group-full">
+              <label for="message">Message / Order Details</label>
+              <textarea id="message" rows="4" placeholder="Tell us what you need or ask any question..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary form-submit">Send Message</button>
+            <div class="form-success" id="formSuccess">
+  
